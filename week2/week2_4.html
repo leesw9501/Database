@@ -2,32 +2,68 @@
 <html>
 
 <head>
-    <title>Parcel Sandbox</title>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HTML Practice</title>
 </head>
 
+
 <body>
-    <h1>Random Number Game</h1>
-    <div id="js-title">
-        <h3 class="js-title">Generate a number between 0 and <span>200</span></h3>
-        <datalist id="number">
-            <option value="50"></option>
-            <option value="100"></option>
-            <option value="150"></option>
-            <option value="200"></option>
-        </datalist>
-        <input list="number" id="js-range" type="range" min="5" max="200" value="5" step="5" />
-    </div>
-    <form id="js-guess">
-        <label for="num">Guess the number:</label>
-        <input id="num" type="number" max="200" min="0" />
-        <button>Play!</button>
+    <h1>Create An Account</h1>
+    <form id="user">
+        <div>
+            <label for="firstname">First name</label>
+            <input id="firstname" type="text" required placeholder="First name">
+        </div>
+        <div>
+            <label for="lastname">Last name</label>
+            <input id="lastname" type="text" placeholder="Last name">
+        </div>
+        <div>
+            <label for="mail">Email</label>
+            <input id="mail" type="email" placeholder="Email">
+        </div>
+        </div>
+        <div>
+            <label for="userid">Username</label>
+            <input id="userid" type="text" placeholder="Username">
+        </div>
+        <div>
+            <label for="pw">Password</label>
+            <input id="pw" type="password" minlength="10" placeholder="Password">
+        </div>
+        <div>
+            <label for="date">Birth date</label>
+            <input id="date" type="date" placeholder="Username">
+        </div>
+        <div>
+            <label for="slide">How happy are you?</label>
+            <input id="slide" type="range" list="tickmarks">
+            <datalist id="tickmarks">
+                <option value="0"></option>
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50"></option>
+                <option value="60"></option>
+                <option value="70"></option>
+                <option value="80"></option>
+                <option value="90"></option>
+                <option value="100"></option>
+            </datalist>
+        </div>
+        <div>
+            <label for="color">What is your fav.color?</label>
+            <input id="color" type="color">
+        </div>
+        <input type="submit" value="Create Account">
     </form>
-    <div id="js-result">
+    <div id="form-result">
         <span></span>
     </div>
 
-    <script type="text/javascript" src="test3.js"></script>
+    <script type="text/javascript" src="week2_4.js"></script>
 
 </body>
 

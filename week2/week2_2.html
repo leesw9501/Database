@@ -3,39 +3,24 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>HTML Practice</title>
+    <title>Insert title here</title>
 </head>
 
 <body>
     <form method="get" action="#" accept-charset="utf-8" name="person_info">
-        <fieldset style="width: 250">
-            <legend>personal information</legend>
-            Select region (with size, multiple attributes)<br />
-            <select name="region-1" size="5" ltiple>
-                <option value="seongnam-si">seongnam-si</option>
-                <option value="suwon-si">suwon-si</option>
-                <option value="yongin-si">yongin-si</option>
-                <option value="anyang-si">anyang-si</option>
-                <option value="gwacheon-si">gwacheon-si</option>
-                <option value="hanam-si">hanam-si</option>
-            </select>
-            <br /><br />
-            Select region (with optgroup tag)<br />
-            <select name="region-1">
-                <optgroup label="Seoul">
-                    <option value="songpa-gu">songpa-gu</option>
-                    <option value="gangnam-gu">gangnam-gu</option>
-                    <option value="seocho-gu">seocho-gu</option>
-                    <option value="junggu-gu">junggu-gu</option>
-                </optgroup>
-                <optgroup label="Gyeonggi-do">
-                    <option value="seongnam-si">seongnam-si</option>
-                    <option value="suwon-si">suwon-si</option>
-                    <option value="yongin-si">yongin-si</option>
-                    <option value="anyang-si">anyang-si</option>
-                </optgroup>
-            </select>
-            <br /><br />
+        <fieldset style="width: 150">
+            <legend>Personal Information</legend>
+            Name: <input type="text" name="name" required /><br /><br />
+            Student Number:
+            <input type="text" name="security_number" pattern="\d{8}"
+                title="Please enter your 8-digit Student number!" /><br /><br />
+            ID: <input type="text" name="id" /><br /><br />
+            Passwords: <input type="password" name="password" /><br /><br />
+            Gender: M<input type="radio" name="gender" /> W<input type="radio" name="gender" /><br /><br />
+            Interests: Economy<input type="checkbox" name="checkbox1" /> 
+            Sports<input type="checkbox" name="checkbox2" /> 
+            IT<input type="checkbox" name="checkbox3" /><br /><br />
+
             <input type="submit" value="submit" /><br /><br />
             <input type="reset" value="reset" /><br /><br />
         </fieldset>
