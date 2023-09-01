@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML Practice</title>
+</head>
+
+<body>
+    <form method="get" action="#" accept-charset="utf-8" name="person_info">
+        <fieldset style="width: 250">
+            <legend>personal information</legend>
+            Select region (with size, multiple attributes)<br />
+            <select name="region-1" size="5" ltiple>
+                <option value="seongnam-si">seongnam-si</option>
+                <option value="suwon-si">suwon-si</option>
+                <option value="yongin-si">yongin-si</option>
+                <option value="anyang-si">anyang-si</option>
+                <option value="gwacheon-si">gwacheon-si</option>
+                <option value="hanam-si">hanam-si</option>
+            </select>
+            <br /><br />
+            Select region (with optgroup tag)<br />
+            <select name="region-1">
+                <optgroup label="Seoul">
+                    <option value="songpa-gu">songpa-gu</option>
+                    <option value="gangnam-gu">gangnam-gu</option>
+                    <option value="seocho-gu">seocho-gu</option>
+                    <option value="junggu-gu">junggu-gu</option>
+                </optgroup>
+                <optgroup label="Gyeonggi-do">
+                    <option value="seongnam-si">seongnam-si</option>
+                    <option value="suwon-si">suwon-si</option>
+                    <option value="yongin-si">yongin-si</option>
+                    <option value="anyang-si">anyang-si</option>
+                </optgroup>
+            </select>
+            <br /><br />
+            <input type="submit" value="submit" /><br /><br />
+            <input type="reset" value="reset" /><br /><br />
+        </fieldset>
+    </form>
+</body>
+
+</html>
