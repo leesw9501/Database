@@ -22,7 +22,7 @@ router.post('/student', async (req, res) => {
     }
     await updateSql.updateStudent(data);
 
-    res.redirect('/update');
+    res.redirect('/update/student');
 })
 
 module.exports = router;
