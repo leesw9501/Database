@@ -1,0 +1,122 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="select.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script>
+    const logout = () => { window.location.href = "http://localhost:3000/logout" };
+    const move = () => { window.location.href = "http://localhost:3000/sugang" };
+  </script>
+</head>
+<div class="header">
+  <div class="header-logo">
+    <div class="logo"><img src="./img/inhaLogo.png" alt="INHA UNIVERSITY" /></div>
+    <span class="logo-text">Enrolment</span>
+  </div>
+
+  <div class="header-info">
+    <span class="header-info_title">Information on transitional measures related to 2021 curriculum reform (<span
+        class="header-info_title_strong">required for student numbers prior to 2020</span>) -> View details</span>
+  </div>
+</div>
+
+<div class="content">
+  <div class="side">
+    <div class="side-frame">
+      <div class="side-frame_id">
+        <div class="userinfo">{{user}}</div>
+        <button class="logout" onclick="logout()">Logout</button>
+      </div>
+    </div>
+    <div class="side-menu">
+      <div class="side-menu_list">
+        <span>Course information</span>
+        <span class="material-icons">add</span>
+      </div>
+      <div class="side-menu_list">
+        <span>Lecture diagnosis</span>
+        <span class="material-icons">add</span>
+      </div>
+      <div class="side-menu_list" onclick="move()">
+        <span>Enrolment</span>
+        <span class="material-icons">add</span>
+      </div>
+      <div class="side-menu_list">
+        <span>Grade confirmation</span>
+        <span class="material-icons">add</span>
+      </div>
+      <div class="side-menu_list">
+        <span>Seasonal semester</span>
+        <span class="material-icons">add</span>
+      </div>
+      <div class="side-menu_list">
+        <span>Subject inquiry</span>
+        <span class="material-icons">add</span>
+      </div>
+      <div class="side-menu_list">
+        <span>Reference Link</span>
+        <span class="material-icons">add</span>
+      </div>
+      <div class="side-menu_list">
+        <span>privacy policy</span>
+        <span class="material-icons">add</span>
+      </div>
+
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-top">
+      <span class="main-top_title">Course registration for the 2nd semester of 2023</span>
+      <div class="main-top_table">
+        <h1 class="info">{{title}}</h1>
+        <table>
+          <tr>
+            <td><b>Id</b></td>
+            <td><b>Course</b></td>
+            <td><b>Professor</b></td>
+            <td><b>Opening Departments</b></td>
+            <td><b>Maximum participants</b></td>
+          </tr>
+          {{#each classes}}
+          <form method="post">
+            <tr>
+              <td>{{ID}}</td>
+              <td>{{Course}}</td>
+              <td>{{Professor}}</td>
+              <td>{{Opening_departments}}</td>
+              <td>{{Number_of_participant}}</td>
+            </tr>
+          </form>
+          {{/each}}
+        </table>
+
+        <h1 class="info">{{title2}}</h1>
+        <table>
+          <tr>
+            <td><b>Id</b></td>
+            <td><b>Course</b></td>
+            <td><b>Professor</b></td>
+            <td><b>Opening Departments</b></td>
+            <td><b>Maximum participants</b></td>
+            <td><b>Remaining participants</b></td>
+          </tr>
+          {{#each allClass}}
+          <form method="post">
+            <tr>
+              <td>{{ID}}</td>
+              <td>{{Course}}</td>
+              <td>{{Professor}}</td>
+              <td>{{Opening_departments}}</td>
+              <td>{{Number_of_participant}}</td>
+              <td id="empty">{{Remaining_participants}}</td>
+              <td style="border: none; margin-left: 10px;">
+                <button style="margin-left: 10px;" name="applyBtn" type="submit" value="{{ID}}" formaction="/sugang">
+                  Apply
+                </button>
+              </td>
+            </tr>
+          </form>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
